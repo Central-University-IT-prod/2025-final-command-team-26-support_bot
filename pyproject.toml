@@ -1,0 +1,21 @@
+[project]
+name = "films_bot"
+version = "0.1.0"
+description = "Support bot for T.Films"
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "pydantic>=2.10.6",
+    "pydantic-settings>=2.8.1",
+]
+
+[dependency-groups]
+bot = [
+    "tortoise-orm[asyncpg]>=0.24.1",
+    "aiogram>=3.18.0"
+]
+dev = [
+    "ruff>=0.9.9",
+]
+
+[tool.ruff.format]
+quote-style = "single"
